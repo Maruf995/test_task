@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Profile</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Freelancer Profile:</h1>
+        {% for freelancer in freelancer_list %}
+            <h2>Username: {{ freelancer.username }}</a></h2>
+            <h2>Phone Number: {{ freelancer.number }}</a></h2>
+            <h2>Email: {{ freelancer.email }}</a></h2>
+            <h2>Experience: {{ freelancer.experience }}</a></h2>
+            <br><br>
+        {% endfor %}
+    </div>
+    <div style="text-align: center;">
+        <h1>Tasks:</h1>
+        {% for task in task_list %}
+            <h2>Title: {{ task.title }}</a></h2>
+            <h2>Description: {{ task.description }}</a></h2>
+            <h2>Price: {{ task.price }}</a></h2>
+            <br><br>
+        {% endfor %}
+    </div>    
+</body>
+</html>
