@@ -32,7 +32,7 @@ class FreelancerProfileView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['task_list'] = Task.objects.all()  # Используем 'task_list' вместо 'task'
+        context['task_list'] = Task.objects.all()  
         return context
 
 class CustomerProfileView(CreateView, ListView):
@@ -47,10 +47,3 @@ class CustomerProfileView(CreateView, ListView):
     def form_valid(self, form):
         return super().form_valid(form=form)
 
-
-# class TaskListView(ListView):
-#     template_name = 'freelancer_profile.html'
-#     queryset = Freelancer.objects.all()
-
-#     def get_queryset(self):
-#         return Freelancer.objects.all()
